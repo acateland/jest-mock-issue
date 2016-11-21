@@ -6,12 +6,14 @@ jest.mock('./mocked', () => (
 	jest.fn(() => 42)
 ));
 
-describe('pathToServer', () => {
-	beforeEach(() => {
-		jest.resetAllMocks();
+describe('mocke problem', () => {
+
+	it('should return 42', () => {
+		expect(tested()).toEqual(42);
 	});
 
-	it('should call smartWebsocket on FLOWDESIGNER.CONNECT command', () => {
+	it('still should return 42', () => {
+		jest.resetAllMocks();
 		expect(tested()).toEqual(42);
 	});
 });
